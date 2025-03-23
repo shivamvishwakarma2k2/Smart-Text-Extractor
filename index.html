@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Primary Meta Tags -->
+        <title>
+            Smart Text Extractor | Free Online OCR Tool for Images & PDFs
+        </title>
+        <meta
+            name="title"
+            content="Smart Text Extractor | Free Online OCR Tool for Images & PDFs"
+        />
+        <meta
+            name="description"
+            content="Extract text from images and PDFs instantly with our free online OCR tool. Convert scanned documents, images, and PDFs to editable text with high accuracy. No registration required."
+        />
+        <meta
+            name="keywords"
+            content="OCR tool, text extraction, PDF to text converter, image to text converter, online OCR, free OCR, document scanner, text recognition, PDF text extractor, image text extractor, OCR software, text from image, extract text from PDF, OCR converter, document digitization"
+        />
+        <meta name="author" content="Smart Text Extractor" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://your-domain.com/" />
+        <meta
+            property="og:title"
+            content="Smart Text Extractor | Free Online OCR Tool for Images & PDFs"
+        />
+        <meta
+            property="og:description"
+            content="Extract text from images and PDFs instantly with our free online OCR tool. Convert scanned documents, images, and PDFs to editable text with high accuracy. No registration required."
+        />
+        <meta
+            property="og:image"
+            content="https://your-domain.com/og-image.jpg"
+        />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://your-domain.com/" />
+        <meta
+            property="twitter:title"
+            content="Smart Text Extractor | Free Online OCR Tool for Images & PDFs"
+        />
+        <meta
+            property="twitter:description"
+            content="Extract text from images and PDFs instantly with our free online OCR tool. Convert scanned documents, images, and PDFs to editable text with high accuracy. No registration required."
+        />
+        <meta
+            property="twitter:image"
+            content="https://your-domain.com/og-image.jpg"
+        />
+
+        <!-- Additional SEO Meta Tags -->
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="theme-color" content="#6366f1" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://your-domain.com/" />
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Smart Text Extractor",
+                "description": "Free online tool to extract text from images and PDF files using advanced OCR technology.",
+                "url": "https://your-domain.com/",
+                "applicationCategory": "UtilityApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "featureList": [
+                    "Extract text from images",
+                    "Convert PDF to text",
+                    "Support for multiple file formats",
+                    "High accuracy OCR",
+                    "Instant processing"
+                ],
+                "screenshot": "https://your-domain.com/screenshot.jpg",
+                "softwareVersion": "1.0.0"
+            }
+        </script>
+
+        <!-- Additional Schema for FAQ -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is Smart Text Extractor?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Smart Text Extractor is a free online tool that uses advanced OCR technology to extract text from images and PDF files. It's perfect for converting scanned documents, images, and PDFs into editable text."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What file formats are supported?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We support multiple image formats including PNG, JPG, TIFF, and PDF files. The tool can process files up to 20MB in size."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is Smart Text Extractor free to use?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, Smart Text Extractor is completely free to use. There are no hidden charges or registration requirements."
+                        }
+                    }
+                ]
+            }
+        </script>
+
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!-- Tesseract.js -->
+        <script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+        <!-- PDF.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bg-gray-50 min-h-screen" role="document">
+        <!-- Skip to main content link for accessibility -->
+        <a href="#main-content" class="sr-only focus:not-sr-only"
+            >Skip to main content</a
+        >
+
+        <div class="animated-bg" aria-hidden="true"></div>
+
+        <!-- Main content wrapper -->
+        <main id="main-content" class="container mx-auto px-4 py-8 max-w-4xl">
+            <!-- Header section -->
+            <header class="text-center mb-6">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-file-alt text-blue-500 mr-2" aria-hidden="true"></i>
+                    Smart Text Extractor
+                </h1>
+                <p class="text-gray-600 text-lg">
+                    Extract text from images and PDFs instantly with our free online OCR tool.
+                </p>
+            </header>
+
+            <aside class="sidebar">
+                <!-- Google AdSense Ad -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1085204149276585"
+     crossorigin="anonymous"></script>
+<!-- side_ad_banner1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1085204149276585"
+     data-ad-slot="4141578494"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            </aside>
+
+
+            
+
+            <!-- Upload Container - Moved to top -->
+            <div class="glass card p-8 mb-8">
+                <div class="md:col-span-5">
+                    <div class="glassmorphism rounded-2xl p-6 space-y-6">
+                        <!-- Supported Formats -->
+                        <div class="space-y-3">
+                            <h3 class="text-sm font-semibold text-gray-700">Supported Formats:</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm flex items-center gap-1">
+                                    <i class="far fa-file-image"></i>PNG
+                                </span>
+                                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm flex items-center gap-1">
+                                    <i class="far fa-file-image"></i>JPG
+                                </span>
+                                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm flex items-center gap-1">
+                                    <i class="far fa-file-image"></i>TIFF
+                                </span>
+                                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm flex items-center gap-1">
+                                    <i class="far fa-file-pdf"></i>PDF
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- Upload Zone -->
+                        <div id="dropZone" class="drop-zone rounded-xl p-8 text-center upload-zone">
+                            <form id="uploadForm" class="space-y-4" role="form" aria-label="File upload form">
+                                <div class="flex flex-col items-center">
+                                    <i class="fas fa-cloud-upload-alt text-5xl text-indigo-600 mb-4 floating"></i>
+                                    <label for="file" class="cursor-pointer group">
+                                        <span class="bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition duration-300 inline-flex items-center gap-2 group-hover:scale-105">
+                                            <i class="fas fa-plus-circle"></i>
+                                            Choose File
+                                        </span>
+                                        <input type="file" id="file" name="file" accept="image/jpeg,image/jpg,image/png,image/gif,image/tiff,image/bmp,.pdf" required class="hidden" onchange="updateFileName()" />
+                                    </label>
+                                    <p id="fileName" class="mt-4 text-gray-600">No file selected</p>
+                                </div>
+
+                                <!-- Extract Button -->
+                                <button type="submit" class="mt-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-xl hover:opacity-90 transition duration-300 flex items-center gap-2 mx-auto transform hover:scale-105 active:scale-95 disabled:opacity-50 btn-primary" id="extractButton">
+                                    <i class="fas fa-magic"></i>
+                                    Extract Text
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div id="progress" class="hidden bg-white rounded-lg shadow-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <div class="animate-spin mr-3">
+                                    <i class="fas fa-circle-notch text-blue-500 text-2xl"></i>
+                                </div>
+                                <span id="progressText" class="text-gray-700">Processing...</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div id="progressBar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google AdSense Ad -->
+<div class="google-ad">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1085204149276585"
+     crossorigin="anonymous"></script>
+<!-- side_ad_banner2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1085204149276585"
+     data-ad-slot="3203767899"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+            <!-- Quick Features Banner -->
+            <div class="flex justify-center gap-6 mb-8 text-sm text-gray-500">
+                <span class="inline-flex items-center">
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                    Free to Use
+                </span>
+                <span class="inline-flex items-center">
+                    <i class="fas fa-bolt text-yellow-500 mr-2"></i>
+                    Instant Processing
+                </span>
+                <span class="inline-flex items-center">
+                    <i class="fas fa-shield-alt text-blue-500 mr-2"></i>
+                    Secure & Private
+                </span>
+            </div>
+
+            <!-- Results Container -->
+            <section aria-label="Results" id="resultContainer" class="glass card p-6 scale-hover hidden mb-8">
+                <div class="flex justify-between items-center p-6">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-book text-blue-500 text-2xl"></i>
+                        <h2 class="text-2xl font-bold text-gray-800">
+                            Extracted Text
+                        </h2>
+                    </div>
+                    <button
+                        onclick="copyToClipboard()"
+                        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300 flex items-center"
+                    >
+                        <i class="far fa-copy mr-2"></i>
+                        Copy Text
+                    </button>
+                </div>
+
+                <div id="resultStats" class="px-6 pb-4">
+                    <!-- Stats will be populated here -->
+                </div>
+
+                <div class="relative bg-white">
+                    <div
+                        class="absolute inset-0"
+                        style="
+                            background-image: repeating-linear-gradient(
+                                transparent,
+                                transparent 27px,
+                                #e5e7eb 28px
+                            );
+                        "
+                    ></div>
+
+                    <div
+                        class="absolute inset-y-0 left-12 border-l border-red-200"
+                    ></div>
+
+                    <div
+                        id="result"
+                        class="relative min-h-[300px] p-6 pl-16 font-mono text-gray-700 text-base leading-7"
+                        style="line-height: 28px"
+                    >
+                        <!-- Extracted text will be populated here -->
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 px-6 py-4 border-t border-gray-100">
+                    <div
+                        class="text-sm text-gray-500 flex items-center justify-center"
+                    >
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Text has been processed and formatted for better
+                        readability
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Section - Moved below main functionality -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Why Choose Smart Text Extractor?</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="glass p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Advanced OCR Technology</h3>
+                        <p class="text-gray-600">Our tool uses state-of-the-art OCR technology to accurately extract text from various document formats with high precision.</p>
+                    </div>
+                    <div class="glass p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Multiple File Support</h3>
+                        <p class="text-gray-600">Extract text from PNG, JPG, TIFF images, and PDF documents. Process files up to 20MB in size.</p>
+                    </div>
+                    <div class="glass p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Instant Processing</h3>
+                        <p class="text-gray-600">Get your extracted text in seconds. No registration required, start using our tool immediately.</p>
+                    </div>
+                    <div class="glass p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Secure & Private</h3>
+                        <p class="text-gray-600">Your documents are processed locally in your browser. We don't store or share your files.</p>
+                    </div>
+                </div>
+            </section>
+        <!-- Enhanced Footer with SEO content -->
+        <footer class="bg-gray-50 py-12 mt-12">
+            <div class="container mx-auto px-4 max-w-4xl">
+        <!-- Google AdSense Ad in Footer -->
+
+                <div class="google-ad">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1085204149276585"
+     crossorigin="anonymous"></script>
+<!-- side_ad_banner3 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1085204149276585"
+     data-ad-slot="3230654215"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <h2 class="text-lg font-semibold mb-4">
+                            About Smart Text Extractor
+                        </h2>
+                        <p class="text-gray-600">
+                            Smart Text Extractor is a free online OCR tool that
+                            helps you convert images and PDFs into editable
+                            text. Perfect for students, professionals, and
+                            anyone needing to digitize text from documents.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold mb-4">Features</h2>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Support for multiple image formats
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                PDF text extraction
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                High accuracy text recognition
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Instant processing
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Free to use
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold mb-4">Use Cases</h2>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i
+                                    class="fas fa-file-alt text-blue-500 mr-2"
+                                ></i>
+                                Document digitization
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-book text-blue-500 mr-2"></i>
+                                Academic research
+                            </li>
+                            <li class="flex items-center">
+                                <i
+                                    class="fas fa-briefcase text-blue-500 mr-2"
+                                ></i>
+                                Business documents
+                            </li>
+                            <li class="flex items-center">
+                                <i
+                                    class="fas fa-archive text-blue-500 mr-2"
+                                ></i>
+                                Archive conversion
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="mt-8 pt-8 border-t border-gray-200 text-center text-gray-500"
+                >
+                    <p>© 2024 Smart Text Extractor. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="toast-container" id="toastContainer"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
